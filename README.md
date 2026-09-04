@@ -1,6 +1,4 @@
 ## Circle Clicker
-Include a very brief summary of your project here. Be sure to include the CSS positioning technique you used, and any required instructions to use your application.
-
 A reaction game with a server-side scoreboard. A circle sits in the play area and moves around everytime you press it. The goal is to press it as  much as possible in 30 secconds. 
 
 App uses flexbox throughout. 
