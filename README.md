@@ -16,4 +16,15 @@ It is a singple page app users submit data when they finish the game. The server
 Users can delete or change the name of a score entry on the scoreboard page.
 
 ### Design/Evaluation Achievements
-- **Design Achievement 1**: 
+
+1.  Han
+2.  The user found the program's white and black theme harsh. They also thought more events during the game would be a good idea for example if multiple circles appeared at the same time and a random delay between circles appearing on the screen.
+3.  Their immediate focus on the background color surprised me. More options or an easier to look at default theme would be a good change. 
+4.  From their feedback I would probably implement more variety in the game play as well as making the web page less harsh to look at along with adding themes.
+
+1. Uttech
+2. The user did not notice the timer on their first play through. They thought that all the UI elements were too small or hard to notice. 
+3. One thing that surprised me was that they said that when they have played similar games to this one they are more comfortable when controlling a video game character's camera and clicking on objects then just using the mouse pointer to do it. It could be a cool idea to have multiple modes where some are using the mouse pointer and others mimic playing a first or 3rd person shooter game. 
+4. From their feedback I would definitely make the timer and end game button bigger to make it clear they exist when playing the game. I make all of the text elements bigger and fit the page more. 
+
+
