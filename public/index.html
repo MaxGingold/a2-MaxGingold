@@ -1,18 +1,57 @@
 <!doctype html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <title>CS4241 Assignment 2</title>
-    <meta charset='utf-8' />
-    <script src='js/main.js'></script>
-    <link rel='stylesheet' href='css/main.css' />
-    
-    <!-- get rid of favicon error -->
-    <link rel='icon' href='data:;base64,iVBORw0KGgo=' />
+    <meta charset="utf-8">
+    <title>Circle Clicker</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   </head>
   <body>
-    <form>
-      <input type='text' id='yourname' value='your name here'>
-      <button>submit</button>
-    </form>
+    <!-- Screen 1: home menu -->
+    <div id="home">
+      <h1>Circle Clicker</h1>
+      <button id="start">Start game</button>
+      <button id="view">View scoreboard</button>
+    </div>
+
+    <!-- Screen 2: the game - a top bar, then the play area with the circle -->
+    <div id="game" hidden>
+      <div id="gameBar">
+        <p>Time left: <span id="time">30</span> | Hits: <span id="hits">0</span></p>
+        <button id="endGame" type="button">End game</button>
+      </div>
+      <div id="play">
+        <button id="target"></button>
+      </div>
+    </div>
+
+    <!-- Screen 3: enter a name for the score just earned -->
+    <div id="nameEntry" hidden>
+      <p>Your score: <span id="finalHits">0</span> hits</p>
+      <form id="scoreForm">
+        <label for="name">Enter your name:</label>
+        <input id="name" placeholder="Name" required>
+        <button type="submit">Save</button>
+      </form>
+      <button id="skip" type="button">Don't Save</button>
+    </div>
+
+    <!-- Screen 4: results table, rows filled in by drawScores() in main.js -->
+    <div id="scoreboard" hidden>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Hits</th>
+            <th>Hits/sec</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="scoreRows"></tbody>
+      </table>
+      <button id="back">Home</button>
+    </div>
   </body>
 </html>

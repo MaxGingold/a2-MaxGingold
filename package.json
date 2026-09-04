@@ -1,8 +1,11 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "a2-maxgingold",
+  "version": "1.0.0",
+  "description": "Max Gingold CS4241 Assignment 2",
+  "author": "Max Gingold",
+  "license": "MIT",
+  "main": "server.js",
+  "homepage": "https://a2-maxgingold.onrender.com",
   "scripts": {
     "start": "node server.js"
   },
@@ -10,6 +13,6 @@
     "mime": "^2.4.4"
   },
   "engines": {
-     "node":"24.x"
+    "node": "24.x"
   }
 }

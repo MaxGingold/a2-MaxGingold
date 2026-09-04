@@ -1,4 +1,142 @@
+/* Load the Roboto font used for all text */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Roboto for all page text */
 body {
-  background:black;
-  color:white;
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* buttons/inputs/tables don't inherit font-family, so set it here too */
+button,
+input,
+table {
+  font-family: inherit;
+}
+
+/* keep a hidden screen hidden even when it has its own display rule */
+[hidden] {
+  display: none !important;
+}
+
+/* Home screen: title + two buttons, centered on the page (flexbox layout) */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 100vh;
+}
+
+#home h1 {
+  margin: 0 0 8px;
+  font-size: 2.5rem;
+}
+
+#home button {
+  width: 220px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Name entry: everything centered on the page (same as the home screen) */
+#nameEntry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Save and "Back without saving" buttons: identical size */
+#nameEntry button {
+  box-sizing: border-box;
+  width: 220px;
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* label, text field and Save button stacked and centered */
+#scoreForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* keep the input a fixed width instead of spanning the page */
+#name {
+  box-sizing: border-box;
+  width: 220px;
+  padding: 8px;
+}
+
+/* Scoreboard screen: centered on the page */
+#scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 100vh;
+  padding: 24px 0;
+  box-sizing: border-box;
+}
+
+/* a line around every cell / entry */
+#scoreboard table {
+  border-collapse: collapse;
+}
+
+#scoreboard th,
+#scoreboard td {
+  border: 1px solid #999;
+  padding: 6px 12px;
+}
+
+/* Rename and Delete buttons side by side in each row */
+.actions button + button {
+  margin-left: 6px;
+}
+
+/* Game screen: a top bar, then the play area filling the rest */
+#game {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* top bar: HUD text on the left, End game pinned to the right */
+#gameBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #000;
+}
+
+/* play area: everything below the bar; the circle is positioned inside this */
+#play {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* The target: a black circle; JS sets its size and left/top each move.
+   border/padding/appearance are cleared so the native button edge doesn't show. */
+#target {
+  position: absolute;
+  border-radius: 50%;
+  background: #000;
+  border: none;
+  padding: 0;
+  appearance: none;
+  cursor: pointer;
 }
